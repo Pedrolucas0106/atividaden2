@@ -1,0 +1,131 @@
+<link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style> 
+
+header {
+    background-color: #6d2e80;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #000000; 
+} 
+
+h3 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #f0f0f0;
+    color: #333;
+} 
+
+p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+} 
+
+
+.gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .gallery-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .gallery-card:hover {
+            transform: scale(1.05); 
+        }
+
+
+/* Estilos gerais para o botão de retorno */
+.back-button {
+  background-color: #f1f1f1; 
+  border: 1px solid #ccc; 
+  color: #333;
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+
+  position: fixed; 
+  top: 40px; 
+  left: 35px; 
+  z-index: 1000; 
+}
+
+.back-button:hover {
+  background-color: #ddd; /* Cor de fundo quando o botão é pressionado */
+}
+
+
+
+</style>
+
+
+<main>
+    <section> 
+        <header>
+            <h2>🦎 Répteis</h2> 
+            <button class="back-button" onclick="window.location.href='/';"><strong>←</strong></button>
+
+        </header>
+        <div class="gallery-container">
+            <div class="gallery-card">
+                <h3>Cobra-Naja (*Naja naja*)</h3>
+                <p><strong>Habitat:</strong> Florestas, campos e áreas secas da Ásia e África.</p>
+                <p><strong>Alimentação:</strong> Pequenos mamíferos, aves e outros répteis.</p>
+                <p><strong>Comportamento:</strong> Possui veneno neurotóxico potente e pode levantar parte do corpo como forma de defesa.</p>
+            </div>
+            <div class="gallery-card">
+                <h3>Jacaré-do-Pantanal (*Caiman yacare*)</h3>
+                <p><strong>Habitat:</strong> Rios, lagos e pântanos da América do Sul.</p>
+                <p><strong>Alimentação:</strong> Peixes, crustáceos e pequenos mamíferos.</p>
+                <p><strong>Comportamento:</strong> Caçador oportunista, desempenha papel importante no equilíbrio do ecossistema.</p>
+            </div>
+            <div class="gallery-card">
+                <h3>Camaleão-pantera (*Furcifer pardalis*)</h3>
+                <p><strong>Habitat:</strong> Florestas tropicais de Madagascar.</p>
+                <p><strong>Alimentação:</strong> Insetos e pequenos vertebrados.</p>
+                <p><strong>Comportamento:</strong> Capaz de mudar de cor para camuflagem ou comunicação social.</p>
+            </div>
+            <div class="gallery-card">
+                <h3>Tartaruga-de-couro (*Dermochelys coriacea*)</h3>
+                <p><strong>Habitat:</strong> Oceanos tropicais e temperados.</p>
+                <p><strong>Alimentação:</strong> Principalmente águas-vivas.</p>
+                <p><strong>Comportamento:</strong> Maior espécie de tartaruga marinha, podendo viajar grandes distâncias para reprodução.</p>
+            </div>
+            <div class="gallery-card">
+                <h3>Dragão-de-Komodo (*Varanus komodoensis*)</h3>
+                <p><strong>Habitat:</strong> Ilhas da Indonésia.</p>
+                <p><strong>Alimentação:</strong> Carnívoro, se alimenta de mamíferos, aves e carcaças.</p>
+                <p><strong>Comportamento:</strong> Maior lagarto do mundo, com mordida infecciosa devido às bactérias presentes na boca.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,148 @@
+<link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style> 
+
+header {
+    background-color: #2e8031;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #000000; 
+} 
+
+h3 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #f0f0f0;
+    color: #333;
+} 
+
+p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+} 
+
+
+.gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .gallery-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .gallery-card:hover {
+            transform: scale(1.05);
+        }
+
+/* Estilos gerais para o botão de retorno */
+.back-button {
+  background-color: #f1f1f1; 
+  border: 1px solid #ccc; 
+  color: #333;
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+
+  position: fixed; 
+  top: 40px; 
+  left: 35px; 
+  z-index: 1000; 
+}
+
+.back-button:hover {
+  background-color: #ddd; /* Cor de fundo quando o botão é pressionado */
+}
+
+
+
+
+</style>
+
+
+<main> 
+    <section>
+            <header> 
+                <h2>🐸 Anfíbios</h2>
+                <button class="back-button" onclick="window.location.href='/';"><strong>←</strong></button>
+            </header> 
+            <div class="gallery-container"> 
+                <div class="gallery-card">
+                    <nav>
+                        <ul> 
+                            <img src="/images/ra.jpg" alt="Ra" class="animal-image"> 
+                            <li><a href="/anfibios/ra"><h3>Rã-Arlequim (Atelopus)</h3></a></li> 
+                            <p><strong>🔹Habitat : </strong>Florestas tropicais da América Central e do Sul.</p>  
+                            <p><strong>🔹 Alimentação: </strong>Pequenos insetos e artrópodes.</p> 
+                            <p><strong>🔹 Curiosidade: </strong>Possuem cores vibrantes que servem como aviso para predadores, pois muitas espécies são altas</p>
+                </div> 
+
+                <div class="gallery-card"> 
+                    <nav>
+                        <ul> 
+                            <img src="/images/salamandra.jpg" alt="Salamandra" class="animal-image"> 
+                            <li><a href="/anfibios/salamandra"><h3>Salamandra-Gigante-da-China (Andrias davidianus)</h3></a></li> 
+                            <p><strong>🔹Habitat : </strong>Rios e córregos frios da China.</p> 
+                            <p><strong>🔹 Alimentação:</strong> Peixes, insetos aquáticos e pequenos anfíbios.</p>
+                            <p><strong>🔹Curiosidade:</strong> Pode chegar a 1,8 metros de comprimento , sendo o maior anfíbio do mundo!</p>
+                </div> 
+
+                <div class="gallery-card">
+                    <nav>
+                        <ul> 
+                            <img src="/images/axalote.jpg" alt="Axalote" class="animal-image">
+                            <li><a href="/anfibios/axalote"><h3>Axolote (Ambystoma mexicanum)</h3></a></li> 
+                            <p><strong>🔹 Habitat: </strong> Lagos e canais do México.</p>
+                            <p><strong>🔹 Alimentação: </strong>Pequenos peixes.</p>
+                            <p><strong>🔹 Curiosidade: </strong>Tem uma incrível capacidade de regeneração, podendo reconstruir partes da própria pele.</p>
+                </div> 
+
+                <div class="gallery-card">
+                    <nav>
+                        <ul> 
+                            <img src="/images/perereca.jpg" alt="Perereca" class="animal-image"> 
+                            <li><a href="/anfibios/perereca"><h3>Perereca-de-olhos-vermelhos (Agalychnis callidryas)</h3></a></li> 
+                            <p><strong>🔹Habitat : </strong>Florestas tropicais da América Central.</p>
+                            <p><strong>🔹Alimentação: </strong> Insetos</p>
+                            <p><strong>🔹Corrente Curiosidade: </strong>Seus...</p>         
+                </div> 
+
+                <div class="gallery-card">
+                    <nav>
+                        <ul> 
+                            <img src="/images/sapo.jpg" alt="Sapo" class="animal-image"> 
+                            <li><a href="/anfibio/sapo"><h3>Sapo-cururu (Rhinella marina)</h3></a></li> 
+                            <p><strong>🔹 Habitat: </strong>Região</p>
+                            <p><strong>🔹 Alimentação: </strong>Insetos, pequenos ratos.</p>
+                            <p><strong>🔹 Curiosidade: </strong>Possui glândulas de veneno atrás dos olhos que secretam...</p>
+                </div>
+            </div>
+    </section> 
+</main>
+<%- include('partials/footer') %>

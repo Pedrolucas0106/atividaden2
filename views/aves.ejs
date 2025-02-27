@@ -1,0 +1,134 @@
+<link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style> 
+
+header {
+    background-color: #4ad8d8;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #000000; 
+} 
+
+h3 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #f0f0f0;
+    color: #333;
+} 
+
+p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+} 
+
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gallery-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* Estilos gerais para o botão de retorno */
+.back-button {
+  background-color: #f1f1f1; 
+  border: 1px solid #ccc; 
+  color: #333;
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+
+  position: fixed; 
+  top: 40px; 
+  left: 35px; 
+  z-index: 1000; 
+}
+
+.back-button:hover {
+  background-color: #ddd; /* Cor de fundo quando o botão é pressionado */
+}
+
+
+
+</style>
+
+
+
+<main>
+        <section> 
+            <header>
+                <h2>🦜 Aves</h2> 
+                <button class="back-button" onclick="window.location.href='/';"><strong>←</strong></button>
+            </header> 
+
+            <div class="gallery-container">
+                <div class="gallery-card">
+                    <h3>Águia-careca (Haliaeetus leucocephalus)</h3>
+                    <p><strong>Habitat:</strong> América do Norte, próxima a rios e lagos.</p>
+                    <p><strong>Alimentação:</strong> Peixes, pequenos mamíferos e aves.</p>
+                    <p><strong>Comportamento:</strong> Voam a grandes altitudes e têm excelente visão.</p>
+                </div>
+                <div class="gallery-card">
+                    <h3>Papagaio-verdadeiro (Amazona aestiva)</h3>
+                    <p><strong>Habitat:</strong> América do Sul, especialmente no Brasil.</p>
+                    <p><strong>Alimentação:</strong> Frutas, sementes e néctar.</p>
+                    <p><strong>Comportamento:</strong> Inteligente e social, imita sons humanos.</p>
+                </div>
+                <div class="gallery-card">
+                    <h3>Pinguim-imperador (Aptenodytes forsteri)</h3>
+                    <p><strong>Habitat:</strong> Antártica.</p>
+                    <p><strong>Alimentação:</strong> Peixes, crustáceos e lulas.</p>
+                    <p><strong>Comportamento:</strong> Vivem em colônias e resistem ao frio extremo.</p>
+                </div>
+                <div class="gallery-card">
+                    <h3>Beija-flor-rubi (Archilochus colubris)</h3>
+                    <p><strong>Habitat:</strong> América do Norte e Central.</p>
+                    <p><strong>Alimentação:</strong> Néctar de flores e pequenos insetos.</p>
+                    <p><strong>Comportamento:</strong> Bate as asas rapidamente e consegue pairar no ar.</p>
+                </div>
+                <div class="gallery-card">
+                    <h3>Tucano-toco (Ramphastos toco)</h3>
+                    <p><strong>Habitat:</strong> América do Sul, em florestas tropicais.</p>
+                    <p><strong>Alimentação:</strong> Frutas, insetos e pequenos vertebrados.</p>
+                    <p><strong>Comportamento:</strong> Seu bico grande ajuda a alcançar frutos distantes.</p>
+                </div>
+            </div>
+        </section>
+</main>
+<%- include('partials/footer') %>

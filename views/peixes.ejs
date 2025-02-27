@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style> 
+
+header {
+    background-color: #3b7db3;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #000000; 
+} 
+
+h3 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #f0f0f0;
+    color: #333;
+} 
+
+p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+} 
+
+
+.gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .gallery-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .gallery-card:hover {
+            transform: scale(1.05); 
+        }
+
+
+/* Estilos gerais para o botão de retorno */
+.back-button {
+  background-color: #f1f1f1; 
+  border: 1px solid #ccc; 
+  color: #333;
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+
+  position: fixed; 
+  top: 40px; 
+  left: 35px; 
+  z-index: 1000; 
+}
+
+.back-button:hover {
+  background-color: #ddd; /* Cor de fundo quando o botão é pressionado */
+}
+
+
+
+</style>
+
+
+
+<main>
+    <section> 
+        <header>
+            <h2>🐠 Peixes</h2> 
+            <button class="back-button" onclick="window.location.href='/';"><strong>←</strong></button>
+
+        </header> 
+        <div class="gallery-container">
+            <div class="gallery-card">
+                <h3>Tubarão-branco (*Carcharodon carcharias*)</h3>
+                <p><strong>Habitat:</strong> Oceanos temperados ao redor do mundo.</p>
+                <p><strong>Alimentação:</strong> Peixes, focas, leões-marinhos e até outros tubarões.</p>
+                <p><strong>Comportamento:</strong> Excelente caçador, possui um olfato aguçado e é capaz de detectar uma gota de sangue a grandes distâncias.</p>
+            </div>
+            <div class="gallery-card">
+                <h3>Peixe-palhaço (*Amphiprioninae*)</h3>
+                <p><strong>Habitat:</strong> Recifes de coral do Indo-Pacífico.</p>
+                <p><strong>Alimentação:</strong> Pequenos crustáceos, algas e plâncton.</p>
+                <p><strong>Comportamento:</strong> Vive em simbiose com anêmonas-do-mar, que oferecem proteção contra predadores.</p>
+            </div>
+            <div class="gallery-card">
+                <h3>Arraia-manta (*Manta birostris*)</h3>
+                <p><strong>Habitat:</strong> Oceanos tropicais e subtropicais ao redor do mundo.</p>
+                <p><strong>Alimentação:</strong> Principalmente plâncton e pequenos peixes.</p>
+                <p><strong>Comportamento:</strong> É um dos maiores peixes do oceano, podendo atingir até 7 metros de envergadura.</p>
+            </div>
+            <div class="gallery-card">
+                <h3>Peixe-beta (*Betta splendens*)</h3>
+                <p><strong>Habitat:</strong> Águas doces e rasas do sudeste asiático, como arrozais e lagoas.</p>
+                <p><strong>Alimentação:</strong> Pequenos insetos, larvas e alimentos industrializados em cativeiro.</p>
+                <p><strong>Comportamento:</strong> Conhecido por sua agressividade, especialmente entre machos da mesma espécie.</p>
+            </div>
+            <div class="gallery-card">
+                <h3>Dourado (*Salminus brasiliensis*)</h3>
+                <p><strong>Habitat:</strong> Rios da América do Sul, como o rio Paraná e o rio São Francisco.</p>
+                <p><strong>Alimentação:</strong> Peixes menores e pequenos crustáceos.</p>
+                <p><strong>Comportamento:</strong> É um peixe predador e esportivo, muito valorizado na pesca devido à sua força.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>
